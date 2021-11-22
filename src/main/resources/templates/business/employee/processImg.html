@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <th:block th:include="common/include :: header('添加')" />
+</head>
+<body class="white-bg">
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-employee-add" th:object="${department}">
+        <div class="form-group">
+            <div class="col-sm-8">
+                部门:  <input type="text" th:field="*{name}" disabled>
+            </div>
+            <div class="col-sm-8">
+                缩写:  <input type="text"  th:field="*{sn}" disabled>
+            </div>
+        </div>
+    </form>
+</div>
+<th:block th:include="common/include :: footer" />
+<script type="text/javascript">
+</script>
+</body>
+</html>
